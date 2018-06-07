@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>CSS Float Elements</title>
+  <style>
+	img{
+		width: 100px;
+		margin: 2px;
+	}
+	.left{
+		float: left;
+	}
+	.right{
+		float: right;
+	}
+	.clearfix{
+		overflow: auto;
+	}
+	/*
+	Old or alt way to do it
+	*/
+	.clearfix-alt{
+		clear: both;
+	}	
+	.reg-potato{
+		width: 100%;
+	}
+  </style>
+</head>
+<body>
+<!-- comment -->
+<div class="reg-potato clearfix" style="background-color: red;">
+<img 
+	class="left"
+	src="https://pixabay.com/static/uploads/photo/2016/08/11/08/43/potatoes-1585060_960_720.jpg"
+	alt="potato" />
+<img
+	class="right"
+	src="https://pixabay.com/static/uploads/photo/2016/08/11/08/43/potatoes-1585060_960_720.jpg"
+	alt="potato" />
+</div>
+<!-- comment -->
+<div class="reg-potato" style="background-color: green;">
+<img 
+	class="left"
+	src="https://pixabay.com/static/uploads/photo/2016/08/11/08/43/potatoes-1585060_960_720.jpg"
+	alt="potato" />
+<img
+	class="right"
+	src="https://pixabay.com/static/uploads/photo/2016/08/11/08/43/potatoes-1585060_960_720.jpg"
+	alt="potato" />
+<div class="clearfix-alt"></div>
+</div>
+<div class="reg-potato">
+<span>
+<img 
+	src="https://pixabay.com/static/uploads/photo/2016/08/11/08/43/potatoes-1585060_960_720.jpg"
+	alt="potato" />
+</span>
+<span>
+<img 
+	src="https://pixabay.com/static/uploads/photo/2016/08/11/08/43/potatoes-1585060_960_720.jpg"
+	alt="potato" />
+</span>
+<!--
+inline - style beside
+block - push and have its own line
+-->
+<div style="display: inline;">
+<img 
+	src="https://pixabay.com/static/uploads/photo/2016/08/11/08/43/potatoes-1585060_960_720.jpg"
+	alt="potato" />
+</div>
+<span>
+<img 
+	src="https://pixabay.com/static/uploads/photo/2016/08/11/08/43/potatoes-1585060_960_720.jpg"
+	alt="potato" />
+</span>
+</div>
+<div class="reg-potato"
+	style="width: 300px;height: 300px; background-color: yellow;">
+<img 
+	style="position: absolute;"
+	src="https://pixabay.com/static/uploads/photo/2016/08/11/08/43/potatoes-1585060_960_720.jpg"
+	alt="potato" />
+<p>akljdlkajdka jal;j ad jalkd jalkd jalk djal;kd </p>
+</div>
+</body>
+</html> 

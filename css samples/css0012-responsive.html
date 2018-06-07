@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>CSS3 Responsive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+	.third-A,.third-B,.third-C{
+		width: 33.3333%;
+		float: left;
+	}
+	.third-A{
+		background-color: lightgreen;
+	}
+	.third-B{
+		background-color: pink;
+	}
+	.third-C{
+		background-color: lightblue;
+	}
+	.clearfix{
+		clear: both;
+	}
+	@media only screen and (max-width: 480px) {
+		.third-A,.third-B,.third-C{
+			width: 100%;
+		}
+		.menu-bar{
+			display: none;
+		}
+	}
+  </style>
+</head>
+<body>
+<ol class="menu-bar">
+<li>Menu A</li>
+<li>Menu B</li>
+<li>Menu C</li>
+</ol>
+<div class="third-A">
+Nullam id finibus risus. Vivamus semper justo ac velit feugiat, efficitur varius elit faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ornare nibh mi, eu rhoncus neque eleifend ac. Etiam feugiat pulvinar laoreet. Nulla eget leo congue, egestas nibh et, sagittis neque. Cras nec scelerisque mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in enim augue. Duis suscipit interdum luctus. Nunc ipsum dui, posuere nec mi vitae, ultrices consequat nisl. Nam lacinia nisi id risus porta, a tempor nisi pretium. Pellentesque tellus neque, molestie eu elit vel, molestie sollicitudin velit. 
+</div>
+<div class="third-B">
+Nullam id finibus risus. Vivamus semper justo ac velit feugiat, efficitur varius elit faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ornare nibh mi, eu rhoncus neque eleifend ac. Etiam feugiat pulvinar laoreet. Nulla eget leo congue, egestas nibh et, sagittis neque. Cras nec scelerisque mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in enim augue. Duis suscipit interdum luctus. Nunc ipsum dui, posuere nec mi vitae, ultrices consequat nisl. Nam lacinia nisi id risus porta, a tempor nisi pretium. Pellentesque tellus neque, molestie eu elit vel, molestie sollicitudin velit. 
+</div>
+<div class="third-C">
+Nullam id finibus risus. Vivamus semper justo ac velit feugiat, efficitur varius elit faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ornare nibh mi, eu rhoncus neque eleifend ac. Etiam feugiat pulvinar laoreet. Nulla eget leo congue, egestas nibh et, sagittis neque. Cras nec scelerisque mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in enim augue. Duis suscipit interdum luctus. Nunc ipsum dui, posuere nec mi vitae, ultrices consequat nisl. Nam lacinia nisi id risus porta, a tempor nisi pretium. Pellentesque tellus neque, molestie eu elit vel, molestie sollicitudin velit. 
+</div>
+<div class="clearfix"></div>
+</body>
+</html> 

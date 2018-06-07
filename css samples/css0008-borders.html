@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>CSS Boarders Elements</title>
+  <style>
+	/* good professionalism */
+	.round-boarders{
+		border-radius: 25px;
+		border: 2px solid #73AD21;
+		padding: 10px;
+	}
+	/* advance */
+	.image-boarders{
+		border: 10px solid transparent;
+		padding: 10px;
+		-webkit-border-image: url(http://www.w3schools.com/css/border.png) 30 round; /* Safari 3.1-5 */
+		-o-border-image: url(http://www.w3schools.com/css/border.png) 30 round; /* Opera 11-12.1 */
+		border-image: url(http://www.w3schools.com/css/border.png) 30 round;
+	}
+  </style>
+</head>
+<body>
+<div class="round-boarders">
+Hello World
+</div>
+<div class="image-boarders">
+Hello World
+</div>
+</body>
+</html> 

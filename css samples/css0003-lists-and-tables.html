@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>CSS Lists and Tables</title>
+  <style>
+    ul{
+	  color: green;
+	  font-family: monospace;
+	  list-style-type: square;
+	  list-style-position: inside;
+	}
+	ol{
+	  color: lightblue;
+	  list-style-type: upper-roman;
+	}
+	table.nonhtml5{
+	  width: 100%;
+      border-collapse: collapse;
+	}
+	table, th, td{
+		border: 1px solid black;
+	}
+	th {
+		height: 50px;
+		text-align: left;
+	}
+	td {
+		height: 50px;
+		vertical-align: bottom;
+	}
+  </style>
+</head>
+<body>
+<ul>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li><a href="http://www.w3schools.com/css/css_list.asp">reference</a></li>
+</ul>
+<ol>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li style="text-align: center;">item 3</li>
+</ol>
+<table class="nonhtml5">
+    <tr>
+        <th>Grade</th>
+        <th>Population</th>
+        <th>Average Grade</th>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>20</td>
+        <td>87</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>21</td>
+        <td>89</td>
+    </tr>
+</table><br />
+<table>
+    <thead>
+        <tr>
+            <th>Grade</th>
+            <th>Population</th>
+            <th>Average Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>4</td>
+        <td>20</td>
+        <td>87</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>21</td>
+        <td>89</td>
+    </tr>
+<tbody>
+<tfoot>
+    <tr>
+        <th>Grade</th>
+        <th>Population</th>
+        <th>Average Grade</th>
+    </tr>
+</tfoot>
+</table>
+</body>
+</html> 

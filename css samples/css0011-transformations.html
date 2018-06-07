@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>CSS3 Transformation</title>
+  <style>
+	.translate-thing{
+		background-color: lightgreen;
+		-ms-transform: translate(50px, 100px); /* IE 9 */
+		-webkit-transform: translate(50px, 100px); /* Safari */
+		transform: translate(50px, 600px);
+	}
+	.rotate-thing{
+		background-color: pink;
+		width: 100px;
+		-ms-transform: rotate(20deg); /* IE 9 */
+		-webkit-transform: rotate(20deg); /* Safari */
+		transform: rotate(20deg);
+	}
+	.scale-thing{
+		width: 100px;
+		background-color: lightblue;
+		-ms-transform: scale(2, 3); /* IE 9 */
+		-webkit-transform: scale(2, 3); /* Safari */
+		transform: scale(2, 3);
+	}
+  </style>
+</head>
+<body>
+<h1>Translate</h1>
+<div class="translate-thing">
+	aaa
+</div>
+<h1>Rotate</h1>
+<div class="rotate-thing">
+	bbb
+</div>
+<h1>Scale</h1>
+<div class="scale-thing">
+	ccc
+</div>
+</body>
+</html> 
