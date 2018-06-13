@@ -1,0 +1,57 @@
+.div1 {
+    color: black;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    padding: 2px;
+    border-top-color: white
+    
+    
+}
+.centered{
+    margin: 0 auto;
+    width: 600px; 
+    padding: 10px;
+    
+}
+
+h1 {
+    top: 10%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    font-variant: small-caps;
+    font-family: verdana;
+    width: 620px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-bottom-color: white;
+}
+
+body {
+    background-image: url("fortnite-background-7.jpg");
+    background-repeat: no-repeat;
+    resize: both;
+    background-size: cover;
+
+}
+
+ul {
+    list-style-position: inside;
+    text-align: left;
+    left: 0%;
+}
+
+p {
+    text-align: justify;
+}
+
+#calculator {
+    background-color: white;
+    margin-top: 10px;
+    border: 1px solid black;
+    
+    
+}
