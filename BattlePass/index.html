@@ -8,11 +8,17 @@
     <title>
         Battle Tier Calculator
     </title>
+    <script src="script.js">
+        function calculateStars(curTier, curStars, goalTier) {
+            return (goalTier - curTier) * 10 - curStars;
+        }
+
+    </script>
 </head>
 
 <body>
     <div class="div1 centered">
-       <p>Hello. I am a college student taking up Bachelor of Science in Computer Science and have a class in Web Development. I am making this tool to practice. -B</p>
+        <p>Hello. I am a college student taking up Bachelor of Science in Computer Science and have a class in Web Development. I am making this tool to practice. -B</p>
         <p>This is my calculator to know how many Battle Stars you need to reach a certain Battle Pass Tier and how many days it will take to earn those stars. This calculator takes into account 3 main things:
         </p>
         <ul>
@@ -20,22 +26,25 @@
             <li>How many Battle Stars you have for the current tier</li>
             <li>How many weeks are left for the weekly challenges</li>
         </ul>
-        
+
     </div>
 
     <div id="calculator" class="centered">
-        Current Battle Pass Tier <input type="number"> <br>
-        Battle Stars for Current Tier <input type="number"> <br>
-        Goal Tier Level <input type="number"> <br>
+        Current Battle Pass Tier <input type="number" id="curTierInput"> <br> Battle Stars for Current Tier <input type="number" id="curStarsInput"> <br> Goal Tier <input type="number" id="goalTierInput"> <br>
         <br>
         <input type="checkbox">Include Daily Challenges<br>
         <input type="checkbox">Include Season Level Ups<br>
-
-        <button>
+        <p id="result"></p>
+        <button onclick="document.getElementById('result').innerHTML=calculateStars(
+           document.getElementById(" curTierInput ").value, document.getElementById("curStarsInput ").value, document.getElementById("goalTierInput ").value)">
             Calculate
         </button>
-    </div>
+        <br>
 
+    </div>
+    <div>
+
+    </div>
 
 </body>
 
