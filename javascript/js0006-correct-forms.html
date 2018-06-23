@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>JS Correct Forms</title>
+  <script>
+  function checkForm(){
+    var nameString = document.forms["main-form"]["name-field"].value;
+	var emailString = document.forms["main-form"]["email-field"].value;
+	var pass1String = document.forms["main-form"]["password1-field"].value;
+	var pass2String = document.forms["main-form"]["password2-field"].value;
+	if(nameString.length<1){
+		alert("name cannot be empty");
+		return false;
+	}else if(emailString.length<1){
+		alert("email cannot be empty");
+		return false;
+	}else if(pass1String!=pass2String){
+		alert("passwords do not match!");
+		return false;
+	}
+	return true;
+  }
+  </script>
+</head>
+<body>
+<form name="main-form" onsubmit="return checkForm()" method="get">
+<table>
+<tr>
+  <td><label>Name</label></td>
+  <td><input name="name-field" type="text"></input></td>
+</tr>
+<tr>
+  <td><label>email</label></td>
+  <td><input name="email-field" type="text"></input></td>
+</tr>
+<tr>
+  <td><label>password</label></td>
+  <td><input name="password1-field" type="password"></input></td>
+</tr>
+<tr>
+  <td><label>re-type password</label></td>
+  <td><input name="password2-field" type="password"></input></td>
+</tr>
+</table>
+<input type='submit' value="submit"></input>
+</form>
+</body>
+</html> 

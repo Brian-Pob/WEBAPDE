@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>JQuery Intro</title>
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
+  <script src="jquery-3.1.1.min.js"></script>
+  <style>
+	#main-body h3{ color: red; }
+	#main-body p{ color: green; }
+  </style>
+  <script>
+	function animationHide(){
+		$(document).ready(function(){
+			$("#main-body").hide(2000);
+		});
+	}
+	function animationShow(){
+		$(document).ready(function(){
+			$("#main-body").show(2000);
+		});
+	}
+	function animationToggle(){
+		$(document).ready(function(){
+			$("#main-body").toggle(2000);
+		});
+	}
+	
+	function animationFadeIn(){
+		$(document).ready(function(){
+			$("#main-body").fadeIn(2000);
+		});
+	}
+	function animationFadeOut(){
+		$(document).ready(function(){
+			$("#main-body").fadeOut(2000);
+		});
+	}
+	function animationFadeToggle(){
+		$(document).ready(function(){
+			$("#main-body").fadeToggle(2000);
+		});
+	}
+
+	function animationSlideUp(){
+		$(document).ready(function(){
+			$("#main-body").slideUp(2000);
+		});
+	}
+	function animationSlideDown(){
+		$(document).ready(function(){
+			$("#main-body").slideDown(2000);
+		});
+	}
+	function animationSlideToggle(){
+		$(document).ready(function(){
+			$("#main-body").slideToggle(2000);
+		});
+	}
+
+  </script>
+</head>
+<body>
+	<div id="main-body">
+		<h3>Hello Header</h3>
+		<p>hello world Body</p>
+	</div>
+	<button onclick="animationHide()">Hide</button>
+	<button onclick="animationShow()">Show</button>
+	<button onclick="animationToggle()">Toggle</button><br />
+	
+	<button onclick="animationFadeIn()">Fade-in</button>
+	<button onclick="animationFadeOut()">Fade-out</button>
+	<button onclick="animationFadeToggle()">F-Toggle</button><br />
+	
+	<button onclick="animationSlideUp()">Slide Up</button>
+	<button onclick="animationSlideDown()">Slide Down</button>
+	<button onclick="animationSlideToggle()">Slide Toggle</button>
+	
+</body>
+</html> 

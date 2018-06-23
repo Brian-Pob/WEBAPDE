@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>JQuery Call back</title>
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
+  <script src="jquery-3.1.1.min.js"></script>
+  <style>
+	#main-body h3{ color: red; }
+	#main-body p{ color: green; }
+  </style>
+  <script>
+    function animationShow(){
+		$(document).ready(function(){
+			$("#main-body").show(2000);
+		});
+	}
+	
+	/*call back function called after an animation is done*/
+	function animationHide(){
+		$(document).ready(function(){
+			$("#main-body").hide(2000,animationShow());
+		});
+	}
+  </script>
+</head>
+<body>
+	<div id="main-body">
+		<h3>Hello Header</h3>
+		<p>hello world Body</p>
+	</div>
+	<button onclick="animationHide()">Hide</button>
+	
+</body>
+</html> 

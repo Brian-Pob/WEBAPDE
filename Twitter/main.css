@@ -1,0 +1,37 @@
+#topbar {
+
+    position: absolute;
+    width: 100%;
+    z-index: 15;
+    top: 17%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    overflow: auto;
+    background-color: white;
+}
+
+#home {
+    background-image: url(imgs/home-512.png);
+}
+
+.mid {
+    margin: auto;
+    width: 70%;
+    height: 300px;
+    border: 1px solid black;
+    float: none;
+}
+
+.right {
+    position: fixed;
+    margin-left: 85%; 
+    margin-top: 10%;
+    border: 1px solid black;
+    float: right;
+}
+
+.left {
+    margin-right: 85%;
+    border: 1px solid black;
+    float: ;
+}

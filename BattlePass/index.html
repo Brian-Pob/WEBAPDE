@@ -9,10 +9,7 @@
         Battle Tier Calculator
     </title>
     <script src="script.js">
-        function calculateStars(curTier, curStars, goalTier) {
-            return (goalTier - curTier) * 10 - curStars;
-        }
-
+        
     </script>
 </head>
 
@@ -30,17 +27,15 @@
     </div>
 
     <div id="calculator" class="centered">
-        Current Battle Pass Tier <input type="number" id="curTierInput"> <br> Battle Stars for Current Tier <input type="number" id="curStarsInput"> <br> Goal Tier <input type="number" id="goalTierInput"> <br>
+        Current Battle Pass Tier <input type="text" id="curTierInput"> <br> Battle Stars for Current Tier <input type="text" id="curStarsInput"> <br> Goal Tier <input type="text" id="goalTierInput"> <br>
         <br>
         <input type="checkbox">Include Daily Challenges<br>
         <input type="checkbox">Include Season Level Ups<br>
-        <p id="result"></p>
-        <button onclick="document.getElementById('result').innerHTML=calculateStars(
-           document.getElementById(" curTierInput ").value, document.getElementById("curStarsInput ").value, document.getElementById("goalTierInput ").value)">
+        <p id="result">Test</p>
+        <button onclick="document.getElementById('result').innerHTML = calculateStars(document.getElementById('curTierInput').value,document.getElementById('curStarsInput').value,document.getElementById('goalTierInput').value)">
             Calculate
         </button>
         <br>
-
     </div>
     <div>
 

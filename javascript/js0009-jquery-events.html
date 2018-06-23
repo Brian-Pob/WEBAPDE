@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>JQuery Events</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <style>
+	#main-body h3{ color: red; }
+	#main-body p{ color: green; }
+  </style>
+  <script>
+	function animation(){
+		$(document).ready(function(){
+			$("#main-body").hide();
+		});
+	}
+	$(document).ready(function(){
+		$("#main-body").dblclick(function(){
+			$(this).hide();
+		});
+	});
+	$(document).ready(function(){
+		$("#main-body").hover(function(){
+			alert("You entered!");
+		});
+	});
+  </script>
+</head>
+<body>
+	<div id="main-body">
+		<h3>Hello Header</h3>
+		<p>hello world Body</p>
+	</div>
+	<button onclick="animation()">Animate</button>
+</body>
+</html> 

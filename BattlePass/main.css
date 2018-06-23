@@ -1,18 +1,20 @@
 .div1 {
-    color: black;
+    color: #ff9900;
     text-align: center;
-    background-color: white;
+    background-color: #00004d;
     border: 1px solid black;
     padding: 2px;
-    border-top-color: white
-    
-    
+    border-top-color: black;
+
+
+
 }
-.centered{
+
+.centered {
     margin: 0 auto;
-    width: 600px; 
+    width: 600px;
     padding: 10px;
-    
+
 }
 
 h1 {
@@ -20,14 +22,14 @@ h1 {
     text-align: center;
     font-size: 25px;
     font-weight: bold;
-    color: black;
-    background-color: white;
+    color: #ff9900;
+    background-color: #00004d;
     font-variant: small-caps;
     font-family: verdana;
     width: 620px;
     margin: 0 auto;
     border: 1px solid black;
-    border-bottom-color: white;
+    border-bottom-color: transparent;
 }
 
 body {
@@ -35,7 +37,7 @@ body {
     background-repeat: no-repeat;
     resize: both;
     background-size: cover;
-
+    font-family: verdana;
 }
 
 ul {
@@ -49,9 +51,10 @@ p {
 }
 
 #calculator {
-    background-color: white;
+    background-color: #00004d;
     margin-top: 10px;
     border: 1px solid black;
-    
-    
+    color: #ff9900;
+
+
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>JS DOM</title>
+  <style>
+	#main-content{
+		color: blue;
+	}
+	#main-image img{
+		max-width: 50%;
+	}
+  </style>
+  <script>
+  function changeHTML(){
+    document.getElementById("main-content").innerHTML = "New Content";
+  }
+  function changeStyle(){
+    document.getElementById("main-content").style.color = "green";
+  }
+  function changeImage(){
+    document.getElementById("main-image").innerHTML = '<img src="https://pixabay.com/static/uploads/photo/2016/08/16/17/12/rotterdam-1598418_960_720.jpg" alt="city" />';
+  }
+  </script>
+</head>
+<body>
+<div id="main-content">
+Ipsum
+</div>
+<div id="main-image">
+<img src="https://pixabay.com/static/uploads/photo/2016/07/14/13/35/matterhorn-1516733_960_720.jpg"
+    alt="mountain" />
+</div>
+<button onclick='changeHTML()'>change content</button>
+<button onclick='changeStyle()'>change style</button><br/>
+<button onclick='changeImage()'>change image</button>
+</body>
+</html> 
