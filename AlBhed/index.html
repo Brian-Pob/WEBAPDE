@@ -1,0 +1,53 @@
+<html>
+    <head>
+    English to Al Bhed Converter
+    <script>
+        const newarray = "YPLTAVKREZGMSHUBXNCDIJFQOW"
+        function convertEng(){
+            var input = document.forms["main-form"]["english"].value.toUpperCase();
+            var outputAB = '';
+            var outputCC = '';
+            for(var x = 0; x < input.length; x++){
+                var num = input[x].charCodeAt(0);
+                if(num >= 65 && num < 91){
+                    
+                
+                    outputAB += newarray[num - 65];
+                    if(num < 88)
+                        var character = String.fromCharCode(num + 3);
+                    else
+                        var character = String.fromCharCode(num - 23);
+                    outputCC += character;
+                }
+                else{
+                    outputAB += input[x];
+                    outputCC += input[x];
+                }
+            }
+            document.forms["main-form"]["albhed"].value =  outputAB;
+            document.forms["main-form"]["caesar"].value = outputCC;
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="main-form" onsubmit="return convertEng()" method="get">
+        <table>
+            <tr>
+                <td><label>English</label></td>
+                <td><input type="text" name="english"></td>
+            </tr>
+            <tr>
+                <td><label>Al Bhed</label></td>
+                <td><input type="text" name="albhed"></td>
+            </tr>
+            <tr>
+                <td><label>Caesar Cipher</label></td>
+                <td><input type="text" name="caesar"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Convert">
+    </form>
+</body>
+</html>

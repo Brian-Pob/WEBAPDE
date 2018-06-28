@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>JS Loops and Conditions</title>
+  <script>
+  //arrays can be defined a number of ways. It can also have starting values.
+  var reverseListOfNumbers = new Array();  
+  var listOfNumbers = [];//[5,3,2]
+  
+  function checkForm(){
+    const numA = Number(document.forms["main-form"]["number1"].value);
+	  const numB = Number(document.forms["main-form"]["number2"].value);
+
+    //push places an element at the end of the array.
+    listOfNumbers.push(numA);
+
+    //unshift places an element at the start of an array.
+    reverseListOfNumbers.unshift(numB);
+
+    //pop removes the last element of an array.
+    //<array>.length gets the length of the array.
+    if(reverseListOfNumbers.length>5)
+      reverseListOfNumbers.pop();
+
+    //shift removes the first element of an array.
+    if(listOfNumbers.length>5)
+      listOfNumbers.shift();
+
+    //There are other methods. Learn here:
+    //https://www.w3schools.com/js/js_arrays.asp
+    //https://www.w3schools.com/js/js_array_methods.asp
+
+    var display = "";
+    for(var i=0; i<listOfNumbers.length; i++)
+        display = display  + listOfNumbers[i] + "|";
+    display = display + ":";
+    for(var i=0; i<reverseListOfNumbers.length; i++)
+        display = display + "|" + reverseListOfNumbers[i];
+  
+    document.forms["main-form"]["number-res"].value = display;
+	  return false;
+  }
+  </script>
+</head>
+<body>
+<form name="main-form" onsubmit="return checkForm()" method="get">
+<table>
+<tr>
+  <td><label>Number 1</label></td>
+  <td><input name="number1" type="text"></input></td>
+</tr><tr>
+  <td><label>Number 2</label></td>
+  <td><input name="number2" type="text"></input></td>
+</tr><tr>
+  <td><label>Result</label></td>
+  <td><input name="number-res" type="text"></input></td>
+</tr>
+</table>
+<input type="submit" value="submit"></input>
+</form>
+</body>
+</html> 

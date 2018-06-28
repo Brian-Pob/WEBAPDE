@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>JS Loops and Conditions</title>
+  <script>
+  //classes can be defined in this manner. A class in js is like a function
+  //where the functions and attributes are defined as data inside the function
+  //to indicate if its for the class, use the keyword "this".
+  function ClassA (numA,numB) {
+    this.numA = numA;
+    this.numB = numB;
+    this.add = function(numC){
+      return this.numA + this.numB + numC;
+    }
+  }
+
+  //classes can also be defined this way in a way called the singleton way.
+  var ClassB = function() {
+    this.numA = 0;
+    this.numB = 0;
+  }
+  
+  var classList = new Array();
+
+  function checkForm(){
+    const numA = Number(document.forms["main-form"]["number1"].value);
+	  const numB = Number(document.forms["main-form"]["number2"].value);
+
+    //classes can created using the keyword "new" and can have constructor
+    //parameters sent throught.
+    var setA = new ClassA(numA,1);
+    var setB = new ClassB();
+
+    //accessing variables and functions of the class is similar to how
+    //other languages do it.
+    setB.numA = numB;
+    setB.numB = setA.add(1);
+
+    //it is very much possible to add classes into lists as well.
+    classList.push(setB);
+
+    var display =0;
+    for(var i=0; i<classList.length; i++)
+      display += classList[i].numA + classList[i].numB;
+  
+    document.forms["main-form"]["number-res"].value = display;
+	  return false;
+  }
+  </script>
+</head>
+<body>
+<form name="main-form" onsubmit="return checkForm()" method="get">
+<table>
+<tr>
+  <td><label>Number 1</label></td>
+  <td><input name="number1" type="text"></input></td>
+</tr><tr>
+  <td><label>Number 2</label></td>
+  <td><input name="number2" type="text"></input></td>
+</tr><tr>
+  <td><label>Result</label></td>
+  <td><input name="number-res" type="text"></input></td>
+</tr>
+</table>
+<input type="submit" value="submit"></input>
+</form>
+</body>
+</html> 

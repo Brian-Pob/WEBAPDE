@@ -1,0 +1,37 @@
+<html>
+    <head>
+    <title>Grocery List</title>
+    <script src="script2.js">
+    </script>
+</head>
+
+<body>
+    <form name="main-form" onsubmit="return updateList()" method="get">
+        <table>
+
+            <tr>
+                <tc>
+                    <td><input type="text" name="item" id="itemInput"></td>
+                    <td><input type="text" name="price" id="priceInput"></td>
+                    <td><input type="text" name="qty" id="qtyInput"></td>
+                    <td><input type="submit" value="Add Item"></td>
+                </tc>
+            </tr>
+            <tr>
+                <tc>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                </tc>
+
+            </tr>
+        </table>
+    </form>
+    <div id="itemDisplay">
+        <ol id="itemList">
+        </ol>
+        Total:
+        <p id="total"></p>
+    </div>
+</body>
+</html>

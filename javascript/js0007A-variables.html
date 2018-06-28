@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>JS Variables</title>
+  <script>
+  function checkForm(){
+    //var is for variable. The data-type is not hard set.
+    var numA = document.forms["main-form"]["number1"].value;
+    //const means constant. This is a variable that does not change
+	  const numB = document.forms["main-form"]["number2"].value;
+
+    //by default, the value the forms returns are strings. to check
+    //its value as a number, it needs to be converted.
+    numA = Number(numA);
+
+    //var data-type can have numbers, strings, lists for its value.
+    var result = '';
+
+    //== operator checks that the values are the same
+    if(numA == 97)
+      result = result + 'a';
+    
+    //=== (tripple =) will check both data-type and value to be the same.
+    if(numA === 97)
+      result = result + 'n';
+  
+    //Both the double quote and the single quote work as strings for JS.
+    //It is also possible to use the back-tick ( ` ). Though JSon does
+    //use double quotes.
+    result = result + 'xX' + "yY" + `zZ`;
+
+    
+    result = result + ':' + (numA + Number(numB)); 
+    document.forms["main-form"]["number-res"].value = result;
+	  return false;
+  }
+  </script>
+</head>
+<body>
+<form name="main-form" onsubmit="return checkForm()" method="get">
+<table>
+<tr>
+  <td><label>Number 1</label></td>
+  <td><input name="number1" type="text"></input></td>
+</tr><tr>
+  <td><label>Number 2</label></td>
+  <td><input name="number2" type="text"></input></td>
+</tr><tr>
+  <td><label>Result</label></td>
+  <td><input name="number-res" type="text"></input></td>
+</tr>
+</table>
+<input type='submit' value="submit"></input>
+</form>
+</body>
+</html> 

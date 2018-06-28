@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>JS Functions</title>
+  <script src="js0007C-external.js"></script>
+  <script>
+  //functions are defined like so. There are no data-types in the variables
+  //and no return-types as well.
+  function sumFn(numA, numB){
+    return numA + numB;
+  }
+
+  //global variables are also possible.
+  var result = 0;
+
+  function checkForm(){
+    const numA = Number(document.forms["main-form"]["number1"].value);
+	  const numB = Number(document.forms["main-form"]["number2"].value);
+
+    result += sumFn(numA,numB);
+    store(numB);
+
+    var display = result + ":" + entry;
+  
+    document.forms["main-form"]["number-res"].value = display;
+	  return false;
+  }
+  </script>
+</head>
+<body>
+<form name="main-form" onsubmit="return checkForm()" method="get">
+<table>
+<tr>
+  <td><label>Number 1</label></td>
+  <td><input name="number1" type="text"></input></td>
+</tr><tr>
+  <td><label>Number 2</label></td>
+  <td><input name="number2" type="text"></input></td>
+</tr><tr>
+  <td><label>Result</label></td>
+  <td><input name="number-res" type="text"></input></td>
+</tr>
+</table>
+<input type="submit" value="submit"></input>
+</form>
+</body>
+</html> 

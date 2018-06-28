@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>JS Loops and Conditions</title>
+  <script>
+  function checkForm(){
+    const numA = Number(document.forms["main-form"]["number1"].value);
+	  const numB = Number(document.forms["main-form"]["number2"].value);
+
+    var result = "";
+    //conditions look similar to how it is used in other languages.
+    if(numA > 5 || numB > 5){
+      result = "too high";
+    }else{
+      //for loops look similar to how it is used in other languages.
+      for(var i=0; i<numA; i++)
+        result = result + "a";
+
+      //while loops look similar to how it is used in other languages.
+      var j=0;
+      while(j<numB){
+        result = result + "B";
+        j++;
+      }
+    }
+  
+    document.forms["main-form"]["number-res"].value = result;
+	  return false;
+  }
+  </script>
+</head>
+<body>
+<form name="main-form" onsubmit="return checkForm()" method="get">
+<table>
+<tr>
+  <td><label>Number 1</label></td>
+  <td><input name="number1" type="text"></input></td>
+</tr><tr>
+  <td><label>Number 2</label></td>
+  <td><input name="number2" type="text"></input></td>
+</tr><tr>
+  <td><label>Result</label></td>
+  <td><input name="number-res" type="text"></input></td>
+</tr>
+</table>
+<input type="submit" value="submit"></input>
+</form>
+</body>
+</html> 
