@@ -1,0 +1,50 @@
+form{
+	background-color: lightblue;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin: 3% 9%;
+    padding: 1%;
+    width: 80%;
+}
+
+table{
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 5px 20px;
+    background-color: lightgreen;
+}
+
+input, select{
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#grocery-list{
+    border-radius: 5px;
+    border: 2px solid black;
+    width:100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.quarter{
+    width:100%;
+    overflow: auto;
+}
+
+.quarter div{
+    width: 24%;
+    float: left;
+}
+
+#grocery-list .quarter:nth-child(odd) {
+    background: lightgreen;
+}
+
+#grocery-list .quarter:nth-child(even) {
+    background: pink;
+}
+
+#grocery-list .quarter:nth-child(1) {
+    background: yellow;
+}

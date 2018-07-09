@@ -1,0 +1,14 @@
+ul#boxlist {
+    list-style: none;
+}
+
+ul#boxlist li{
+    display: inline;
+}
+ul#boxlist li div{
+    border: 3px solid black;
+    display: inline;
+    min-width: 200px;
+    min-height: 200px;
+    margin: auto;
+}

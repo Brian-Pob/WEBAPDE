@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>Forms Activity Combined</title>
+  <link rel="stylesheet" type="text/css" href="grocery.css">
+  <script src="grocery.js"></script>
+</head>
+<body>
+<form name="main-form" method="get">
+<table>
+<tr>
+    <td><select name="food-fld">
+            <option value="0">Fish</option>
+            <option value="1">Chicken</option>
+            <option value="2">Pork</option>
+            <option value="3">Beef</option>
+            <option value="4">Aligator</option>
+        </select></td>
+    <td><input name="qty-fld" type="text" required /></td>
+    <td><input type="button" value="Add" onclick="addItem()" /></td>
+</tr>
+<tr>
+    <td><label>Food</label></td>
+    <td><label>Quantity</label></td>
+</tr>
+</table>
+
+<div id="grocery-list">
+    <div class="quarter">
+        <div>Item</div>
+        <div>Price</div>
+        <div>Quantity</div>
+        <div>Total</div>
+    </div>
+</div>
+    
+<label>Total:</label>
+<input name="total-fld" type="text" />
+</form>
+    
+</body>
+</html> 

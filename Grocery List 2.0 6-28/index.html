@@ -1,7 +1,10 @@
 <html>
-    <head>
+
+<head>
     <title>Grocery List</title>
     <script src="script2.js">
+
+
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,8 +16,16 @@
 
                 <tr>
                     <tc>
-                        <td><input type="text" name="item" id="itemInput"></td>
-                        <td><input type="text" name="price" id="priceInput"></td>
+                        <td>
+                            <select name="item" id="items" onchange="updatePrice();">
+                                <option value="Fish">Fish</option>
+                                <option value="Chicken">Chicken</option>
+                                <option value="Beef">Beef</option>
+                                <option value="Pork">Pork</option>
+                                <option value="Crocodile">Crocodile</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="price" id="priceInput" value="100" readonly></td>
                         <td><input type="text" name="qty" id="qtyInput"></td>
                         <td><input type="submit" value="Add Item"></td>
                     </tc>
@@ -38,4 +49,5 @@
     </div>
 
 </body>
+
 </html>
