@@ -1,5 +1,5 @@
 nav.top {
-    width: 600px;
+    width: 100%;
     display: flex;
     background-color: white;
     box-shadow: 0 1px 0px rgba(0,0,0, 0.2);
@@ -97,7 +97,7 @@ img.user_icon{
 p.username{
     margin-top: -51px;
     margin-left: 70px;
-    width 4%;
+    
     font-family: sans-serif;
     font-weight: bold;
     font-size: 1rem;
