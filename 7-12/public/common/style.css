@@ -1,0 +1,26 @@
+.dog{
+    color: brown;
+    font-weight: bold;
+    font-size: 50px;
+}
+img.dog{
+    content: url(https://www.healthypawspetinsurance.com/Images/V3/DogAndPuppyInsurance/Dog_CTA_Desktop_HeroImage.jpg);
+}
+
+.cat{
+    color: orange;
+    font-style: italic;
+}
+img.cat{
+    content: url(https://i.ytimg.com/vi/YCaGYUIfdy4/maxresdefault.jpg);
+}
+
+.ham{
+    color: blue;
+    font-style: normal;
+
+}
+
+img.ham{
+    content: url(https://d2kwjcq8j5htsz.cloudfront.net/2016/08/16153058/hamster-health-center-2.jpg);
+}

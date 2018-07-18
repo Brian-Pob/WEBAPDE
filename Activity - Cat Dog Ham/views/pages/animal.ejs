@@ -1,0 +1,33 @@
+<%
+var script;
+var img;
+if(data.index === 1){
+   script = "./common/cat.css";
+   img = "./imgs/cat.jpg";
+}else if(data.index === 2){
+   script = "./common/dog.css";
+   img = "./imgs/dog.jpg";
+}else if(data.index === 3){
+   script = "./common/hamster.css";
+   img = "./imgs/hamster.jpg";
+}else{
+   script = "./common/style.css";
+   img = "./imgs/sunrise.png";
+}
+%>
+<html>
+  <head>
+    <title>Static Assets</title>
+      <link href="<%= script %>" rel="stylesheet" />
+    <script type="text/javascript" src="./common/script.js" ></script>
+  </head>
+  <body>
+     <div class="animal-body">
+        <img src="<%= img %>" />
+    </div>
+    <div class="animal-text">
+        <h1>This is an animal of some sort!</h1>
+        <p>All images are their respective owners and is used in this example for educational purposes only.</p>
+    </div>
+  </body>
+</html>

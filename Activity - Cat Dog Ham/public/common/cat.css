@@ -1,0 +1,16 @@
+.animal-body{
+    border-radius: 25px;
+    background: black; 
+    padding: 10px;
+    text-align: center;
+}
+
+.animal-body img{
+    border-radius: 25px;
+    max-width: 400px;
+}
+
+.animal-text{
+    text-align: center;
+    color: black;
+}
