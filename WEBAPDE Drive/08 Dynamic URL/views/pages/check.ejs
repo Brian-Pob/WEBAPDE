@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Second Page</title>
+  </head>
+  <body>
+  <% include ./header %>
+  <div>
+  <p>Resulting Data</p>
+    <table> 
+      <tr> 
+        <td><label>IDno</label></td> 
+        <td><label><%= data.id %></label></td> 
+      </tr> <tr> 
+        <td><label>Food</label></td> 
+        <td><label><%= data.food %></label></td> 
+      </tr>  <tr> 
+        <td><label>Anim</label></td> 
+        <td><label><%= data.animal %></label></td> 
+      </tr> 
+    </table> 
+  </div>
+  <% include ./footer %>
+  </body>
+</html>

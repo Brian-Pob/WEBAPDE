@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>First Page</title>
+  </head>
+  <body>
+  <!-- To put files in each other, use the include tag and the file to be used -->
+  <% include ./header %>
+  <div>
+  <p>This is a sample form!</p>
+<form action='answer' method='post'>
+    <table> 
+      <tr> 
+        <td><label>id</label></td> 
+        <td><input type='text' name='id' /></td> 
+      </tr>
+    </table> 
+    <input type='submit' value='Submit' /> 
+    </form> 
+  </div>
+  <!-- this can be added through-out the file -->
+  <% include ./footer %>
+  </body>
+</html>

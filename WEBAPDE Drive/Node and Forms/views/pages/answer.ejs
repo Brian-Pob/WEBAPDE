@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Second Page</title>
+  </head>
+  <body>
+  <% include ./header %>
+  <div>
+  <p>Resulting Data</p>
+    <table> 
+      <tr> 
+        <td><label>Name</label></td> 
+        <!-- the content can be accessed though the use of the object like so -->
+        <td><label><%= data.lastname %></label></td> 
+      </tr> <tr> 
+        <td><label>Pass</label></td> 
+        <td><label><%= data.firstname %></label></td> 
+      </tr>  <tr> 
+        <td><label>Pass</label></td> 
+        <td><label><%= data.middlename %></label></td> 
+      </tr>  <tr> 
+        <td><label>Pass</label></td> 
+        <td><label><%= data.bday %></label></td> 
+      </tr> 
+    </table> 
+  </div>
+  <% include ./footer %>
+  </body>
+</html>

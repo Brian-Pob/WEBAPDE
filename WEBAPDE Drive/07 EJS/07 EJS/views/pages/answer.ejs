@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Second Page</title>
+  </head>
+  <body>
+  <% include ./header %>
+  <div>
+  <p>Resulting Data</p>
+    <table> 
+      <tr> 
+        <td><label>Name</label></td> 
+        <!-- the content can be accessed though the use of the object like so -->
+        <td><label><%= data.name %></label></td> 
+      </tr> <tr> 
+        <td><label>Pass</label></td> 
+        <td><label><%= data.pass %></label></td> 
+      </tr> 
+    </table> 
+  </div>
+  <% include ./footer %>
+  </body>
+</html>
