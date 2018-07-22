@@ -8,7 +8,7 @@ const server = express();
 const bodyParser = require('body-parser')
 server.use(express.json()); 
 server.use(express.urlencoded({ extended: true }));
-
+ 
 //The system must use the ejs view engine. When this is used,
 //it will require a folder called "views" where all the embeded
 //javascript files will be used. Sub-foldering may also be used.
