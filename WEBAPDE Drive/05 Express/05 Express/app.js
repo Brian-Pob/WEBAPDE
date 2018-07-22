@@ -2,7 +2,7 @@
 //use a framework to make the process much quicker. One such framework is Express.js
 //It needs to be installed first from the package manager. Once done, just 'require' it.
 const express = require('express');
-const server = express();
+const server = express(); // express removes the need for manually typing to create the http server
 
 //The get function allows the server to process a get request and return the page that is
 //requested. The function needs the path of the URL and a function that acts as the 
