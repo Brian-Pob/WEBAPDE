@@ -3,31 +3,36 @@
     <title>Homepage</title>
       <script>
     //Taken directly from W3 schools
-    function getCookie(cname) {
-        var name = cname + "=";
-        var ca = document.cookie.split(';');
+    function getCookie(cname) { //param: cookie name
+        var name = cname + "="; //myData =
+        var ca = document.cookie.split(';'); //split by ; to get different cookies
+        // console.log(document.cookie)
+        // console.log('\n')
+        // console.log(ca)
         for(var i = 0; i < ca.length; i++) {
             var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
+            while (c.charAt(0) == ' ') { //while the first character in the cookie is a blank space ' '
+                c = c.substring(1); //advance the string forward
             }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
+            if (c.indexOf(name) == 0) { //if the name of the desired cookie is the first name
+                return c.substring(name.length, c.length); //return the content of the cookie from the name of the cookie (start)
+                                                           //to the end of the cookie (the content of the cookie you want)
             }
         }
-        return "";
+        return ""; //if empty cookie return blank
     }
     function putContent(){
         var content = '';
-        var segs = getCookie('mydata').split('%24');
-        for(var i=0;i<segs.length;i++){
-            var rows = segs[i].split('-');
-            content += '<tr>';
+        var segs = getCookie('mydata').split('%24'); //gets the cookie's content and splits the text
+        // console.log(getCookie('mydata'))
+        for(var i=0;i<segs.length;i++){//line in the cookie denoted by the '$' aka '%24'
+            var rows = segs[i].split('-'); //splits the content section of the cookie by last name, first name, and id number
+            content += '<tr>'; //make a new row per item in the cookie
             for(var j=0;j<rows.length;j++)
-                content += '<td>'+rows[j]+'</td>';
-            content += '</tr>';
+                content += '<td>'+rows[j]+'</td>'; //for every lastname, firstname, and idnum, place it in a <td>
+            content += '</tr>';//end the row of the item
         }
-        document.getElementById('content').innerHTML = content;
+        document.getElementById('content').innerHTML = content; //add the content of the cookie to the html
     }
     </script>
   </head>
