@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Homepage</title>
+      <script>
+    //Taken directly from W3 schools
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    function putContent(){
+        var content = '';
+        var segs = getCookie('mydata').split('%24');
+        for(var i=0;i<segs.length;i++){
+            var rows = segs[i].split('-');
+            content += '<tr>';
+            for(var j=0;j<rows.length;j++)
+                content += '<td>'+rows[j]+'</td>';
+            content += '</tr>';
+        }
+        document.getElementById('content').innerHTML = content;
+    }
+    </script>
+  </head>
+  <body onload='putContent()'>
+  <h1>Content of Cache!</h1>
+  <table id='content'></table>
+  </body>
+    
+</html>
