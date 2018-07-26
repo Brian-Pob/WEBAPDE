@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <title>Colored Page</title>
+    <style>
+        .back-blue {
+            background-color: blue;
+        }
+
+        .back-black {
+            background-color: black;
+        }
+
+        .back-red {
+            background-color: red;
+        }
+
+        .back-yellow {
+            background-color: yellow;
+        }
+
+        .back-green {
+            background-color: green;
+        }
+
+        .back-white {
+            background-color: white;
+        }
+
+        .font-black {
+            color: black;
+        }
+
+        .font-white {
+            color: white;
+        }
+
+        .font-blue {
+            color: blue;
+        }
+
+        .font-red {
+            color: red;
+        }
+
+        .font-green {
+            color: green;
+        }
+
+        .font-yellow {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body onload="applyColor()" id="postbody">
+    <div id="postdiv">
+        <h1>Content</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo cumque alias quisquam ea adipisci vitae non laborum
+            tempore quis placeat possimus, ducimus quod nostrum, ad, assumenda in deleniti numquam reiciendis.</p>
+    </div>
+</body>
+<script>
+    function getCookie(cookiename) {
+        var name = cookiename + "="; //myData =
+        var ca = document.cookie.split(';'); //split by ; to get different cookies
+        // console.log(document.cookie)
+        // console.log('\n')
+        // console.log(ca)
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') { //while the first character in the cookie is a blank space ' '
+                c = c.substring(1); //advance the string forward
+            }
+            if (c.indexOf(name) == 0) { //if the name of the desired cookie is the first name
+                return c.substring(name.length, c.length); //return the content of the cookie from the name of the cookie (start)
+                //to the end of the cookie (the content of the cookie you want)
+            }
+        }
+        return ""; //if empty cookie return blank
+    }
+
+    function applyColor(){
+        var segs = getCookie('background-color')
+        console.log(segs)
+        document.getElementById('postbody').classList.add(segs)
+        segs = getCookie('post-color')
+        document.getElementById('postdiv').classList.add(segs)
+        segs = getCookie('font-color')
+        document.getElementById('postdiv').classList.add(segs)
+    }
+
+</script>
+
+</html>

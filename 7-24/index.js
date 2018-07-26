@@ -1,21 +1,31 @@
-const express = require('express');
-const server = express();
+const express = require('express')
+const app = express()
+const bodyparser = require('body-parser')
+const cookieparser = require('cookie-parser')
 
-const bodyParser = require('body-parser');
-server.use(express.json());
-server.use(express.urlencoded({
-    extended: true
-}));
+app.use(cookieparser());
+app.use(bodyparser())
+app.set('view engine', 'ejs')
 
-server.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'))
 
-server.get('/', function(req, resp){
-    resp.render('form.ejs');
-});
-server.post('/data', function(req, resp){
-    var data = {lastname: req.body.lastname, firstname: req.body.firstname, idnum: req.body.idnum};
-    resp.render('./data',{data: data});
-});
+app.get('/', function(req, resp){
+    resp.render('./form.ejs')
+})
 
-const port = process.env.PORT | 9090;
-server.listen(port);
+app.post('/data', function(req, resp){
+    var lastname = req.body.lastname
+    var firstname = req.body.firstname
+    var idnum = req.body.idnum
+
+    if(lastname !== undefined && firstname !== undefined && idnum !== undefined)
+        if(req.cookies.mycookie === undefined)
+            resp.cookie('mycookie', lastname+'-'+firstname+'-'+idnum)
+        else
+            resp.cookie('mycookie', req.cookies.mycookie+'$'+lastname+'-'+firstname+'-'+idnum)
+
+    resp.render('./data.ejs')
+})
+
+const port = process.env.port | 9090
+app.listen(port)
