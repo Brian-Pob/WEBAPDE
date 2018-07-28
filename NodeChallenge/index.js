@@ -19,7 +19,7 @@ server.get('/text', function(req, resp){
     resp.cookie('fontcolor', req.query.fontcolor)
     resp.cookie('postcolor', req.query.postcolor)
     
-    
+    // req.session.cookie.maxAge = 1000 * 60 * 60;
     
     resp.render('./index.ejs')
 })
