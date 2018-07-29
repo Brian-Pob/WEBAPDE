@@ -5,7 +5,8 @@ const server = express();
 //and feed it the correct url to run MongoDB.
 //URL is the database it connects to.
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/logindb'); //with Mongoose, there's no need to pass the database URL with every function call
+mongoose.connect('mongodb://localhost:27017/logindb'); //with Mongoose, there's no need to pass the database URL 
+//with every function call
 
 const bodyParser = require('body-parser')
 server.use(express.json());
@@ -75,8 +76,8 @@ server.post('/read-user', function (req, resp) {
   //The model can be found via a search query and the information is found
   //in the login function. Access the information like a JSon array.
   loginModel.findOne(searchQuery, function (err, login) { //accessing the model through
-    if (err)                                              //loginModel
-      return console.error(err); 
+    if (err) //loginModel
+      return console.error(err);
     if (login != undefined && login._id != null) //make sure the result is not empty
       queryResult = 1;
 
@@ -108,7 +109,7 @@ server.post('/update-user', function (req, resp) {
   //can be edited. Call the save function to update the changes.
   loginModel.findOne(updateQuery, function (err, login) { //login is the data returned
     //does not check if the user exists first
-    if(login != undefined && login._id != null){
+    if (login != undefined && login._id != null) {
       login.pass = req.body.pass;
       login.save(function (err, result) {
         if (err) return console.error(err);
@@ -123,7 +124,7 @@ server.post('/update-user', function (req, resp) {
 
       });
 
-    }else{
+    } else {
       const passData = {
         goodStatus: 0,
         msg: "User does not exist"
@@ -133,7 +134,7 @@ server.post('/update-user', function (req, resp) {
         data: passData
       });
     }
-      
+
 
   });
 });
