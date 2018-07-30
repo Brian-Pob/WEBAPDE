@@ -10,6 +10,18 @@ app.use(express.urlencoded({
     extended: true
 }))
 
+const session = require('express-session')
+app.use(session({
+    secret: 'blamp',
+    resave: false,
+    saveUninitialized: true,
+    store: new mongoStore({
+        mongooseConnection: mongoose.connection,
+        ttl: 2 * 24 * 60 * 60,
+        autoRemove: 'native'
+    })
+}))
+
 app.set('view engine', 'ejs')
 
 const colorSchema = new mongoose.Schema({
@@ -32,7 +44,14 @@ app.get('/', function (req, resp) {
     resp.render('./index.ejs')
 })
 
-app.post('/index', function (req, resp) {
+app.get('/index', function(req, resp) {
+    if(!isUndefined(req.session.backgroundcolor) && !isUndefined(req.session.postcolor) && !isUndefined(req.session.fontcolor)){
+        
+    }
+    resp.render('./index.ejs')
+})
+
+app.post('/submitcolor', function (req, resp) {
     const colorInstance = colorModel({
         backgroundcolor: req.body.backgroundcolor,
         fontcolor: req.body.fontcolor,
@@ -40,8 +59,15 @@ app.post('/index', function (req, resp) {
     })
 
     colorInstance.save(function (err, data){
-        if(err)
+        var data
+        if(err){
             console.error(err)
+            data = {message: 'Did not save successfully'}
+        }else{
+            data = {message: 'Saved Successfully'}
+        }
+        resp.render('./saved')
+            
     })
     
 })

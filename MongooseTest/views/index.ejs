@@ -1,9 +1,5 @@
 <%
-if(data === undefined){
-    data.backgroundcolor = white;
-    data.postcolor = white;
-    data.fontcolor = black;
-}
+
 %>
 <html>
 
@@ -12,15 +8,7 @@ if(data === undefined){
         Colored Page
     </title>
 </head>
-<style>
-    #thebody{
-        background-color: '<%= data.backgroundcolor %>'
-    }
-    .thediv{
-        background-color: '<%= data.postcolor %>';
-        color: '<%= data.fontcolor %>';
-    } 
-</style>
+
 <body onload="" id="thebody">
     <div class="thediv">
         <p>
