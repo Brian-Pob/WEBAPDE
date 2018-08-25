@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>Start Page</title>
+</head>
+
+<body onload="setSelectedOption()">
+    <form action="text" name="colorform" method="get">
+        <table>
+            <tr>
+                <td>Background color: </td>
+                <td>
+                    <select name="backgroundcolor" id="backgroundcolor">
+                            <option id="back-green" value="green">Green</option>
+                            <option id="back-black" value="black">Black</option>
+                            <option id="back-white" value="white">White</option>
+                            <option id="back-red" value="red">Red</option>
+                            <option id="back-yellow" value="yellow">Yellow</option>
+                            <option id="back-blue" value="blue">Blue</option>
+                        </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Font color: </td>
+                <td>
+                    <select name="fontcolor" id="fontcolor">
+                            <option id="font-green" value="green">Green</option>
+                            <option id="font-black" value="black">Black</option>
+                            <option id="font-white" value="white">White</option>
+                            <option id="font-red" value="red">Red</option>
+                            <option id="font-yellow" value="yellow">Yellow</option>
+                            <option id="font-blue" value="blue">Blue</option>
+                        </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Post color: </td>
+                <td>
+                    <select name="postcolor" id="postcolor">
+                            <option id="post-green" value="green">Green</option>
+                            <option id="post-black" value="black">Black</option>
+                            <option id="post-white" value="white">White</option>
+                            <option id="post-red" value="red">Red</option>
+                            <option id="post-yellow" value="yellow">Yellow</option>
+                            <option id="post-blue" value="blue">Blue</option>
+                        </select>
+                </td>
+            </tr>
+            <tr>
+                <input type="submit" value="Submit Query">
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    
+    function setSelectedOption(){
+        var backCookie = 'back-'+getCookie('backgroundcolor')
+        document.getElementById(backCookie).setAttribute('selected', true)
+        
+        var postCookie = 'post-'+getCookie('postcolor')
+        document.getElementById(postCookie).setAttribute('selected', true)
+        
+        var fontCookie = 'font-'+getCookie('fontcolor')
+        document.getElementById(fontCookie).setAttribute('selected', true)
+    }
+
+</script>
+
+</html>

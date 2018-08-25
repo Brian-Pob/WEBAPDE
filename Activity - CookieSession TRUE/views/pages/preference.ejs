@@ -1,0 +1,67 @@
+<%
+//3.C. Select peference changes
+//3.D. Submit said form
+const array = ['red','green','blue','yellow','white','black'];
+var pageIndex;
+var postIndex;
+var fontIndex;
+for(var i=0;i<array.length;i++){
+    if(array[i] === data.bg)
+        pageIndex = i;
+    if(array[i] === data.post)
+        postIndex = i;
+    if(array[i] === data.font)
+        fontIndex = i;
+}
+%>
+    <html>
+
+    <head>
+        <title>Preferences</title>
+    </head>
+
+    <body>
+        <form name='form-pref' action='saved' method='get'>
+            <label>Post BG</label>
+            <select name='post'>
+                <% for(var i=0;i<array.length;i++){ 
+            var selected = '';
+            if(i===postIndex)
+                selected = ' selected';
+        %>
+                    <option value='<%= array[i] %>' <%=s elected %>>
+                        <%= array[i] %>
+                    </option>
+                    <% } %>
+            </select>
+            <br />
+            <label>Page BG</label>
+            <select name='page'>
+                <% for(var i=0;i<array.length;i++){ 
+            var selected = '';
+            if(i===pageIndex)
+                selected = ' selected';
+        %>
+                    <option value='<%= array[i] %>' <%=s elected %>>
+                        <%= array[i] %>
+                    </option>
+                    <% } %>
+            </select>
+            <br />
+            <label>Font Color</label>
+            <select name='font'>
+                <% for(var i=0;i<array.length;i++){ 
+            var selected = '';
+            if(i===fontIndex)
+                selected = ' selected';
+        %>
+                    <option value='<%= array[i] %>' <%=s elected %>>
+                        <%= array[i] %>
+                    </option>
+                    <% } %>
+            </select>
+            <input type='submit' value='OK' />
+        </form>
+    </body>
+
+    </html>

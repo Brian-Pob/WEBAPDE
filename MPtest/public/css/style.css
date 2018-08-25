@@ -1,0 +1,54 @@
+.img-post {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.img-post img {
+    margin-bottom:10px;
+    margin-top:10px;
+    width: 100%;
+}
+
+#sign-up, #log-in, #profile-btn, #logout{
+    margin-right: 5px;
+}
+
+
+/*  PROFILE STYLING   */
+
+.container.overview {
+    text-align: center;
+}
+
+.profile.info{
+    padding: inherit;
+    text-align: center;
+    display: inline;
+}
+
+.profile.username{
+   text-align: center;
+    /*  Will add styling later   */
+
+}
+
+.profile.desciption{
+    /*  Will add styling later   */
+}
+
+.userpic{
+    width: 140px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/* logged in */
+
+
+.uploadbtn{
+    text-align: center;
+}
+.commentBox{
+    width: 300;     
+}

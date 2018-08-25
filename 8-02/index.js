@@ -10,7 +10,7 @@ server.use(express.urlencoded({extended: true}))
 
 
 
-const mongoStore = require('connect-mongo')
+
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost:27017/logindb', {useNewUrlParser: true})
 
@@ -46,15 +46,16 @@ server.post('/homepage', function(req, resp){
 
 
         if (login != undefined && login._id != null) {
-            var datares
-            loginModel.find({}, function(err, res){
-                datares = res
-            })
-            console.log(datares)
-            resp.render('./homepage', {
-                data: datares
+            // var datares
+            // loginModel.find({}, function(err, res){
+            //     datares = res
+            // })
+            // console.log(datares)
+            // resp.render('./homepage', {
+            //     data: datares
 
-            })
+            // })
+            resp.render('./homepage')
         }
         else {
             resp.redirect('/?login=failed')
@@ -64,5 +65,16 @@ server.post('/homepage', function(req, resp){
     })
 })
 
+server.get('/view_all', function(req, resp){
+    var datares
+    loginModel.find({}, function(err, res){
+        datares = res
+        resp.render('./view_all', {
+            data: datares
+        })
+    })
+    
+    
+})
 const port = process.env.PORT | 9090
 server.listen(port)

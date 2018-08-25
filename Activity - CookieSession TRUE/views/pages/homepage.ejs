@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Homepage</title>
+      <style>
+          body{
+              background: <%= data.bg %>;
+          }
+          .post{
+              background: <%= data.post %>;
+              width: 80%;
+              margin: 10%;
+          }
+          .post p, .post a{
+              color: <%= data.font %>;
+          }
+      </style>
+  </head>
+  <body>
+  <div class='post'>
+      <p>This is the first paragraph!</p>
+  </div>
+  <div class='post'>
+      <p>Second Paragraph...</p>
+  </div>
+  <div class='post'>
+      <a href='/preference'>Set Preference</a>
+      <a href='/logout'>Logout!</a>
+  </div>  
+    </body>
+</html>
